@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-image: url('https://i.imgur.com/gwaVvVh.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh; /* Ensures the body takes up the full viewport height */
+            overflow: hidden;
+        }
+
+        /* Header with Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            align-items: center;
+            background-color: rgba(32, 35, 42, 0.7); /* Darker background with transparency */
+        }
+
+        header .branding {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 5px; 
+        }
+
+        header p {
+            font-size: 25px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px white;
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-left: 40px; /* Align the content to the left */
+            margin-top: 85px; /* Add some margin to move the content down */
+        }
+
+        .main-content h2 {
+            font-size: 40px;
+            font-weight: 300;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="branding">
+            <h1>MOHAMMED FAROOQ</h1>
+            <p>Software Engineer</p>
+        </div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Hi there!</h2>
+        <h2>Welcome to my portfolio..</h2>
+        <h2>Where creativity meets code.</h2>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Portfolio</title>
+    <style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-image: url('https://i.imgur.com/d25R47m.jpeg'); /* Same background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Keep the background fixed */
+    overflow-y: scroll; /* Allow scrolling if content overflows */
+}
+
+/* Header with Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    background-color: rgba(32, 35, 42, 0.7); /* Header background */
+    position: fixed; /* Fix header at the top */
+    width: 100%; /* Ensure header spans the full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure header stays above other content */
+}
+
+header .branding {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+header p {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px white;
+}
+
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px white;
+}
+
+ /* Ensure content starts below the fixed header */
+        body::before {
+            content: "";
+            display: block;
+            height: 80px; /* Height of the header */
+        }
+
+        /* About Me Section */
+        .about-me {
+            padding: 60px 40px;
+            background-color: rgba(48, 52, 58, 0.7); /* Slightly darker background for contrast */
+            margin: 40px 0;
+            border-radius: 10px;
+            max-width: 600px; /* Adjust width for a slimmer box */
+            text-align: left;
+            margin-left: 40px; /* Align box to the left side */
+        }
+
+        .about-me h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skills h3 {
+            font-size: 28px;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        .skills ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .skills ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Languages Section */
+        .languages {
+            margin-top: 30px;
+        }
+
+        .languages h3 {
+            font-size: 28px;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        .languages ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .languages ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .stars {
+            margin-left: 10px;
+            display: flex;
+        }
+
+        .star {
+            font-size: 20px;
+            color: #F0E68C;
+            margin-right: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="branding">
+            <h1>MOHAMMED FAROOQ</h1>
+            <p>Software Engineer</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about" class="active">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p>Hello there! I'm Mohammed Farooq, a passionate Software Engineer with a love for building impactful solutions through technology. My journey started with a Bachelor's degree in Information Technology from <a href="https://islec.edu.in/" target="_blank" style="color: #F0E68C; text-decoration: underline;">ISL Engineering Collage</a> affiliated with <a href="https://www.osmania.ac.in/" target="_blank" style="color: #F0E68C; text-decoration: underline;">Osmania University</a>.Since then, I have continually pursued opportunities to expand my knowledge and skills. I have gained hands-on experience in various programming languages and tools, and have been involved in numerous projects that have honed my problem-solving and analytical abilities. My dedication to lifelong learning and innovation drives me to stay updated with the latest industry trends and technologies. I am excited about the possibilities ahead and eager to contribute to cutting-edge solutions in the tech world.</p>
+        
+        <div class="skills">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Python</li>
+                <li>NodeJS</li>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>Web Development</li>
+                <li>Cloud Computing</li>
+                <li>Software Proficiency (Microsoft Office)</li>
+                <li>Data Analysis (Excel)</li>
+                <li>Git</li>
+                <li>Git hub</li>
+                <li>GitLab</li>
+                <li>Visual Studio Code</li>
+                <!-- Add more as needed -->
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Communication</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Adaptability</li>
+                <!-- Add more as needed -->
+            </ul>
+        </div>
+
+        <div class="languages">
+            <h3>Languages</h3>
+            <ul>
+                <li>
+                    English
+                    <div class="stars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                </li>
+                <li>
+                    Hindi
+                    <div class="stars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                </li>
+                <li>
+                    Telugu
+                    <div class="stars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

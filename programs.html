@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - My Portfolio</title>
+    <style>
+           /* Existing CSS rules */
+
+        .bold-text {
+            font-weight: bold;
+            color: #F0E68C;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-image: url('https://i.imgur.com/e43vb9R.jpeg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; /* Keep the background fixed */ 
+            height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
+            color: #fff;
+        }
+        
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            align-items: center;
+            background-color: rgba(32, 35, 42, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .branding {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        header p {
+            font-size: 25px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px white;
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px white;
+        }
+
+        body::before {
+            content: "";
+            display: block;
+            height: 80px;
+            height: 80px; /* Height of the header */
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 60px 40px;
+            background-color: rgba(48, 52, 58, 0.93);
+            margin: 140px auto 40px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: left;
+            margin-left: auto; /* Shift to the right */
+            margin-right: auto;
+                  
+}
+
+        .programs h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        }
+           /* Adding space between paragraphs */
+                   p {
+            margin-bottom: 20px; /* Adds space between paragraphs */
+            line-height: 1.6;    /* Increases space between lines */
+        }
+        
+            .programs p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .programs-item {
+            margin-top: 30px;
+        }
+
+        .programs-item h3 {
+            font-size: 28px;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        .programs-item p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Allow page overflow for scrolling */
+        body {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="branding">
+            <h1>MOHAMMED FAROOQ</h1>
+            <p>Software Engineer</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">projects</a>
+            <a href="#programs" class ="active">programs</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- programs Section -->
+    <div class="programs">
+        <h2>Programs I Have Completed </h2>
+        <p>After my bachelor's degree, I wanted to strengthen my foundational knowledge and gain practical experience. I recognized that the rapidly evolving tech landscape demanded a continuous upgrade of skills, so I sought out programs that would challenge me to think and solve real-world problems. By committing to <a href="https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home?utm_source=braze&utm_medium=email&utm_campaign=enrollmentconfirmation&utm_content=English+Email" target="_blank" style="color: #F0E68C; text-decoration: underline;">CS50x</a> and <a href="https://www.theodinproject.com/" target="_blank" style="color: #F0E68C; text-decoration: underline;">The Odin Project</a>, I aimed to fill any gaps in my understanding and ensure that I was well-prepared for the technical challenges ahead, while also cultivating a deeper expertise in software development and problem-solving.<p>
+        <div class="programs-item">
+            <h3>CS50x: Mastering the Foundations of Computer Science</h3>
+            <p>CS50x is Harvard University's renowned introduction to computer science, and it was instrumental in deepening my understanding of core programming principles. The program covered a wide range of fundamental topics that have enhanced my problem-solving skills and technical competence.</p> <p>Through CS50x, I developed a strong grasp of algorithms, data structures, and computational thinking. I learned how to efficiently analyze and solve complex problems using techniques like recursion, dynamic programming, and searching/sorting algorithms. This course provided a solid understanding of how computers process information, which improved my ability to design efficient and scalable solutions.</p><p>CS50x also introduced me to web development, covering both front-end and back-end technologies. I learned the basics of HTML, CSS, JavaScript, and SQL, enabling me to create dynamic, data-driven websites. Beyond technical skills, the program emphasized clean coding practices, version control using Git, and collaborative problem-solving through pair programming and teamwork.</p>
+<p>By the end of the course, I had not only gained technical expertise but also a new level of confidence in my ability to tackle real-world programming challenges. CS50x pushed me to think critically, write efficient code, and continuously refine my skills through projects that tested my understanding in meaningful ways.</p>
+        </div>
+        <div class="programs-item">
+            <h3>The Odin Project</h3>
+            <p><span class="bold-text">The Odin Project:</span> is an extensive and immersive program designed to provide a comprehensive education in full-stack web development. By engaging in this program, I delved into a wide range of modern web technologies and development practices, which significantly enhanced my technical skills and understanding of the industry. Here’s a detailed overview of what I learned through The Odin Project:</p><P><span class="bold-text">1.Foundational Web Development Skills:</span></p><p><span class="bold-text">HTML & CSS:</span>I mastered the building blocks of web development by creating well-structured, responsive web pages using HTML5 and CSS3. This included the design and implementation of various layout techniques, typography, and responsive design principles to ensure compatibility across different devices and screen sizes.</p><p><span class="bold-text">JavaScript:</span> I developed a strong foundation in JavaScript, learning about its core concepts such as variables, functions, objects, and arrays. I implemented advanced features like asynchronous programming with promises and async/await, as well as manipulating the DOM to create interactive and dynamic web applications.</p><p><span class="bold-text">2.Version Control and Collaboration:</span></p><p><span class="bold-text">Git & GitHub:</span>I gained proficiency in version control using Git and GitHub, which included creating and managing repositories, branching, merging, and resolving conflicts. This experience helped me understand the importance of collaboration in software development and how to manage code changes effectively within a team.</p><p><span class="bold-text">3.Front-End Frameworks and Libraries:</span></p><p><span class="bold-text">React:</span>I explored React, a powerful JavaScript library for building user interfaces. I learned how to create reusable components, manage state, and utilize React’s ecosystem for efficient front-end development. This included understanding hooks, context, and routing to build complex and scalable applications</p><p><span class="bold-text">4.Back-End Development:</span></p><p><span class="bold-text">Node.js & Express:</span> I developed server-side applications using Node.js and Express.js, learning how to build RESTful APIs, handle HTTP requests and responses, and manage server-side logic. This experience provided me with a solid understanding of how to create and interact with databases and backend services.</p><p><span class="bold-text">Databases:</span> I worked with both SQL and NoSQL databases, including PostgreSQL and MongoDB. I learned how to design schemas, perform CRUD operations, and implement database queries to manage and retrieve data efficiently.</p><p><span class="bold-text">5.Project-Based Learning:</span></p><p><span class="bold-text">Capstone Projects:</span>The Odin Project emphasized hands-on learning through a series of capstone projects. These projects involved developing full-stack applications from scratch, integrating front-end and back-end components, and deploying them to live environments. This practical experience honed my problem-solving skills and reinforced my ability to work on real-world development tasks.</p><p><span class="bold-text">5.Deployment and DevOps:</span></p><p><span class="bold-text">Deployment:</span>I learned the processes involved in deploying web applications, including configuring servers, managing deployment pipelines, and ensuring application security and performance. This included using cloud platforms and services to host and scale applications.</p><p><span class="bold-text">7.Soft Skills:</span></p><p><span class="bold-text">Problem-Solving & Debugging:</span>Through various coding challenges and project work, I developed strong problem-solving and debugging skills. I became adept at identifying and resolving issues, optimizing code, and improving application performance.</p>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

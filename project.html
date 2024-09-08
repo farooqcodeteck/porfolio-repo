@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-image: url('https://i.imgur.com/RoukwPq.jpeg');
+            background-size: cover;
+            background-position: left -400px top 35px;
+            background-attachment: fixed; /* Keep the background fixed */ 
+            height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            align-items: center;
+            background-color: rgba(32, 35, 42, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .branding {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        header p {
+            font-size: 25px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px white;
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px white;
+        }
+
+        body::before {
+            content: "";
+            display: block;
+            height: 80px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 40px;
+            background-color: rgba(48, 52, 58, 0.7);
+            margin: 40px 0;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: left;
+            margin-left: auto; /* Shift to the right */
+        }
+
+        .projects h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        }
+
+        .projects p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-item {
+            margin-top: 30px;
+        }
+
+        .project-item h3 {
+            font-size: 28px;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Allow page overflow for scrolling */
+        body {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="branding">
+            <h1>MOHAMMED FAROOQ</h1>
+            <p>Software Engineer</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects" class="active">Projects</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Projects Section -->
+    <div class="projects">
+        <h2>My Projects</h2>
+        <p>During my bachelor’s degree, I undertook and successfully completed two pivotal projects. The first was a mini project focused on developing a voice assistant application, designed to streamline user interactions through advanced voice recognition technology. The second was a major final-year project, where I worked on an innovative solution for Alzheimer’s diagnosis using 3-D brain imaging. This project aimed to enhance early detection and diagnostic accuracy through the application of cutting-edge imaging techniques.<p>
+        <div class="project-item">
+            <h3>AI Voice Assistant</h3>
+            <p>Optimized with PyCharm: Utilized PyCharm’s features for streamlined and
+efficient development.
+Smart Web Search Automation: Engineered real-time, precise web search
+capabilities.
+Seamless YouTube Integration: Enabled intuitive voice-controlled search and
+video playback.
+Enhanced Calculation Features: Implemented robust functions for both simple
+and complex computations.
+Dynamic Weather Detection: Integrated real-time weather updates from trusted
+sources.
+Python Mastery: Demonstrated expertise by creating a cutting-edge, interactive
+voice assistant with advanced features.
+Futuristic User Experience: Delivered a responsive, intuitive interface that sets a
+new standard for voice assistants.</p>
+        </div>
+        <div class="project-item">
+            <h3>Alzheimer Diagnosis Using 3-D Brain Imaging</h3>
+            <p>Introduction of NMF-TDnet Approach:
+Developed an advanced method, NMF-TDnet (Non-negative Matrix
+Factorization with Temporal Dynamics network), specifically designed for 3-D
+brain imaging.
+The approach utilizes a sophisticated network structure, enhanced by
+layerwise convolution, to analyze complex brain data with unprecedented
+accuracy.
+Key Innovations:
+Network Structure & Layerwise Convolution:
+Integrated a unique combination of network architecture and convolutional
+layers, allowing for deeper, more nuanced understanding of brain patterns.
+This innovation enables the system to identify subtle markers of
+Alzheimer's disease that were previously undetectable.
+Efficiency Improvement:
+Achieved a 40% reduction in processing time, significantly accelerating the
+diagnostic workflow.
+The streamlined process allows for faster interpretation of imaging data,
+leading to quicker clinical decision-making.
+Accuracy Enhancement:
+Set new benchmarks in diagnostic accuracy, ensuring early detection of
+Alzheimer's with higher confidence.
+The method's precision in identifying early-stage Alzheimer's makes it a
+valuable tool for clinicians.
+Integration with SVM for Enhanced Precision:
+Integrated NMF-TDnet with Support Vector Machines (SVM), a robust machine
+learning technique, to further enhance diagnostic precision.
+The hybrid system leverages the strengths of both NMF-TDnet and SVM,
+resulting in superior diagnostic outcomes.
+Impact on Alzheimer's Research and Diagnosis:
+The introduction of NMF-TDnet represents a significant advancement in
+Alzheimer's research, offering a new standard for 3-D brain imaging analysis.
+The combined approach of NMF-TDnet and SVM has the potential to
+revolutionize the early diagnosis and treatment of Alzheimer's, ultimately
+improving patient care and outcomes.</p>
+        </div>
+    </div>
+
+</body>
+</html>
