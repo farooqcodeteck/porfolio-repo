@@ -7,6 +7,13 @@
 <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/js/all.min.js"></script>
     <style>
   /* Existing CSS rules */
+    
+       .hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
 
         .bold-text {
             font-weight: bold;	
@@ -385,7 +392,7 @@
     </header>
 
     <!-- Home Section -->
-    <div id="home">
+    <div id="home" class="visible">
         <div class="main-content">
             <h2>Hi there!</h2>
             <h2>Welcome to my portfolio..</h2>
@@ -394,7 +401,7 @@
     </div>
 
     <!-- About Me Section -->
-    <div id="about" style="display: none;">
+    <div id="about" class="hidden">
         <div class="about-me">
             <h2>About Me</h2>
            <p>Hello! I'm Mohammed Farooq, a passionate Software Engineer with a love for building impactful solutions through technology. My journey started with a Bachelor's degree in Information Technology from <a href="https://islec.edu.in/" target="_blank" style="color: #F0E68C; text-decoration: underline;">ISL Engineering Collage</a> affiliated with <a href="https://www.osmania.ac.in/" target="_blank" style="color: #F0E68C; text-decoration: underline;">Osmania University</a>. Since then, I have continually pursued opportunities to expand my knowledge and skills. I have gained hands-on experience in various programming languages and tools, and have been involved in numerous projects that have honed my problem-solving and analytical abilities. My dedication to lifelong learning and innovation drives me to stay updated with the latest industry trends and technologies. I am excited about the possibilities ahead and eager to contribute to cutting-edge solutions in the tech world.</p>
@@ -466,7 +473,7 @@
     </div>
 
     <!-- Projects Section -->
-    <div id="projects" style="display: none;">
+    <div id="projects" class="hidden">
         <div class="projects-content">
             <h2>My Projects</h2>
             <p>During my bachelor’s degree, I undertook and successfully completed two pivotal projects. The first was a mini project focused on developing a voice assistant application, designed to streamline user interactions through advanced voice recognition technology. The second was a major final-year project, where I worked on an innovative solution for Alzheimer’s diagnosis using 3-D brain imaging. This project aimed to enhance early detection and diagnostic accuracy through the application of cutting-edge imaging techniques.</p>
@@ -528,7 +535,7 @@ improving patient care and outcomes.</p>
         </div>
     </div>
         <!-- Programs Section -->
-        <div id="programs" style="display: none;">
+        <div id="programs" class="hidden">
         <div class="programs-content">
         <h2>Programs I Have Completed </h2>
         <p>After my bachelor's degree, I wanted to strengthen my foundational knowledge and gain practical experience. I recognized that the rapidly evolving tech landscape demanded a continuous upgrade of skills, so I sought out programs that would challenge me to think and solve real-world problems. By committing to <a href="https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home?utm_source=braze&utm_medium=email&utm_campaign=enrollmentconfirmation&utm_content=English+Email" target="_blank" style="color: #F0E68C; text-decoration: underline;">CS50x</a> and <a href="https://www.theodinproject.com/" target="_blank" style="color: #F0E68C; text-decoration: underline;">The Odin Project</a>, I aimed to fill any gaps in my understanding and ensure that I was well-prepared for the technical challenges ahead, while also cultivating a deeper expertise in software development and problem-solving.<p>
@@ -541,7 +548,11 @@ improving patient care and outcomes.</p>
             <p><span class="bold-text">The Odin Project:</span> is an extensive and immersive program designed to provide a comprehensive education in full-stack web development. By engaging in this program, I delved into a wide range of modern web technologies and development practices, which significantly enhanced my technical skills and understanding of the industry. Here’s a detailed overview of what I learned through The Odin Project:</p><P><span class="bold-text">1.Foundational Web Development Skills:</span></p><p><span class="bold-text">HTML & CSS:</span>I mastered the building blocks of web development by creating well-structured, responsive web pages using HTML5 and CSS3. This included the design and implementation of various layout techniques, typography, and responsive design principles to ensure compatibility across different devices and screen sizes.</p><p><span class="bold-text">JavaScript:</span> I developed a strong foundation in JavaScript, learning about its core concepts such as variables, functions, objects, and arrays. I implemented advanced features like asynchronous programming with promises and async/await, as well as manipulating the DOM to create interactive and dynamic web applications.</p><p><span class="bold-text">2.Version Control and Collaboration:</span></p><p><span class="bold-text">Git & GitHub:</span>I gained proficiency in version control using Git and GitHub, which included creating and managing repositories, branching, merging, and resolving conflicts. This experience helped me understand the importance of collaboration in software development and how to manage code changes effectively within a team.</p><p><span class="bold-text">3.Front-End Frameworks and Libraries:</span></p><p><span class="bold-text">React:</span>I explored React, a powerful JavaScript library for building user interfaces. I learned how to create reusable components, manage state, and utilize React’s ecosystem for efficient front-end development. This included understanding hooks, context, and routing to build complex and scalable applications</p><p><span class="bold-text">4.Back-End Development:</span></p><p><span class="bold-text">Node.js & Express:</span> I developed server-side applications using Node.js and Express.js, learning how to build RESTful APIs, handle HTTP requests and responses, and manage server-side logic. This experience provided me with a solid understanding of how to create and interact with databases and backend services.</p><p><span class="bold-text">Databases:</span> I worked with both SQL and NoSQL databases, including PostgreSQL and MongoDB. I learned how to design schemas, perform CRUD operations, and implement database queries to manage and retrieve data efficiently.</p><p><span class="bold-text">5.Project-Based Learning:</span></p><p><span class="bold-text">Capstone Projects:</span>The Odin Project emphasized hands-on learning through a series of capstone projects. These projects involved developing full-stack applications from scratch, integrating front-end and back-end components, and deploying them to live environments. This practical experience honed my problem-solving skills and reinforced my ability to work on real-world development tasks.</p><p><span class="bold-text">5.Deployment and DevOps:</span></p><p><span class="bold-text">Deployment:</span>I learned the processes involved in deploying web applications, including configuring servers, managing deployment pipelines, and ensuring application security and performance. This included using cloud platforms and services to host and scale applications.</p><p><span class="bold-text">7.Soft Skills:</span></p><p><span class="bold-text">Problem-Solving & Debugging:</span>Through various coding challenges and project work, I developed strong problem-solving and debugging skills. I became adept at identifying and resolving issues, optimizing code, and improving application performance.</p>
         </div>
     </div>
-            <div id="contact" class="contact-section" style="display: none;">
+   
+   
+     <!-- contactme Section -->
+   
+    <div id="contact" class="hidden">
     <h2>Contact Me</h2>
     <div class="social-icons">
         <a href="mailto:mohammedfarooq753@gmail.com" title="Gmail" aria-label="Gmail"><i class="fas fa-envelope fa-2x"></i></a>
@@ -564,8 +575,7 @@ improving patient care and outcomes.</p>
     </div>
 </div>
 
-
-// JavaScript to handle navigation between sections
+<script>
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -576,14 +586,13 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
         // Get the target section's ID
         const targetId = this.getAttribute('href').substring(1);
-        
-        // Hide all sections
-        document.querySelectorAll('div[id], section[id]').forEach(section => {
-            section.classList.remove('visible');
-            section.classList.add('hidden');
-        });
 
-        // Show the target section
+        // Hide all sections and make the target section visible
+        document.querySelectorAll('div[id]').forEach(section => {
+            section.classList.add('hidden');
+            section.classList.remove('visible');
+        });
+        
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
             targetSection.classList.remove('hidden');
@@ -593,6 +602,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
         }
     });
 });
+ </script>
+
 </body>
 </html>
 
