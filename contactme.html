@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/js/all.min.js"></script>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-image: url('https://i.imgur.com/jqfiOYT.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh; /* Ensures the body takes up the full viewport height */
+            overflow: hidden;
+        }
+
+        /* Header with Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            align-items: center;
+            background-color: rgba(32, 35, 42, 0.7); /* Darker background with transparency */
+        }
+
+        header .branding {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 5px; 
+        }
+
+        header p {
+            font-size: 25px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px white;
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;            /* Keep flexbox for layout */
+            flex-direction: column;   /* Stack icons vertically */
+            align-items: flex-start;  /* Align items to the left */
+            margin: 20px 40px;       /* Adjust margin as needed */
+            position: absolute;       /* Absolute positioning to place it below the name */
+            top: 130px;               /* Adjust this value based on your layout */
+            left: 100px;               /* Align to the left of the container */
+        }
+
+        .social-icons a {
+            margin-bottom: 35px;   /* Add space between icons */
+            font-size: 30px;         /* Icon size */
+            color: #80ffff;          /* Default color */
+            transition: all 0.3s ease;
+        }
+
+        /* Contact Me Section */
+        .contact-section {
+            background-color: rgba(32, 35, 42, 0.7);
+            padding: 40px;
+            max-width: 600px; /* You can adjust this width as needed */
+            margin: 30px 40px; /* Top and bottom margin only */
+            border-radius: 10px;
+            text-align: left; /* Align text to the left */
+            position: relative; /* Keeps it positioned in the normal flow */
+            float: right; /* This will align the section to the right */
+            clear: both; /* Ensures no floating elements interfere with positioning */
+        }
+
+        .contact-section h2 {
+            text-align: center; /* Center the heading text */
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .contact-section input, .contact-section textarea {
+            width: calc(100% - 30px); /* Full width minus padding for better alignment */
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #333;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-section input[type="submit"] {
+            background-color: #80ffff;
+            color: black;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .contact-section input[type="submit"]:hover {
+            background-color: #00ffff;
+        }
+
+        .resume-btn-wrapper {
+    margin-top: 20px; /* Add spacing above the button */
+}
+
+.resume-btn {
+    display: inline-block; /* Makes the link behave like a button */
+    width: calc(100% - 30px); /* Full width minus padding for better alignment */
+    padding: 15px; /* Match padding of the input fields */
+    margin: 10px 0; /* Spacing above and below the button */
+    background-color: #80ffff; /* Same background color as submit button */
+    color: black; /* Text color */
+    font-size: 18px; /* Font size */
+    text-align: center; /* Center text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.resume-btn:hover {
+    background-color: #00ffff; /* Change color on hover */
+}
+
+    </style>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="branding">
+            <h1>MOHAMMED FAROOQ</h1>
+            <p>Software Engineer</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact" class="active">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+   <a href="mailto:mohammedfarooq753@gmail.com" title="Gmail" aria-label="Gmail"><i class="fas fa-envelope fa-2x"></i>
+</a>
+<a href="https://www.linkedin.com/in/mohammedfarooqcodeteck/" title="LinkedIn" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i>
+</a>
+        <a href="https://github.com/farooqcodeteck" title="Github" target="_blank" aria-label="Github"><i class="fa-brands fa-github fa-2x"></i>
+</a>
+<a href="https://x.com" title="X-Twitter" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter fa-2x"></i>
+</a>
+<a href="https://instagram.com" title="Instagram" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram fa-2x"></i>
+</a>
+<a href="https://www.theodinproject.com/" title="The Odin Project" target="_blank" aria-label="The Odin Project">
+    <i class="fa-solid fa-link fa-2x"></i>
+</a>
+        
+    </div>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-form-wrapper"> <!-- New div added here -->
+            <form action="https://formspree.io/f/xgveednq" method="POST">
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+    <input type="submit" value="Submit">
+</form>
+  </div>
+
+        <!-- Download Resume Button -->
+<div class="resume-btn-wrapper"> <!-- New wrapper div -->
+    <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
+</div>
+>
+    </section>
+</body>
+</html>

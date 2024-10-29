@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/js/all.min.js"></script>
+    <style>
+  /* Existing CSS rules */
+
+        .bold-text {
+            font-weight: bold;	
+	    color: #F0E68C;
+       }
+          /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            height: 100vh;
+            overflow: auto; /* Allow the body to scroll */
+            margin: 0;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+ /* Header with Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            align-items: center;
+            background-color: rgba(32, 35, 42, 0.7); /* Darker background with transparency */
+            position: fixed; /* Fix header at the top */
+            width: 100%; /* Ensure header spans the full width */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Make sure header stays above other content */
+        }
+							
+        header .branding {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        header p {
+            font-size: 25px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px white;
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px white;
+        }
+
+        /* Home Section */
+        #home {
+            background-image: url('https://i.imgur.com/gwaVvVh.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh; /* Full viewport height */
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-left: 40px; /* Align the content to the left */
+            margin-top: 110px; /* Add some margin to move the content down */
+        }
+
+        .main-content h2 {
+            font-size: 40px;
+            font-weight: 300;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        /* About Me Section */
+        #about {
+            background-image: url('https://i.imgur.com/d25R47m.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed; /* Keep the background fixed */
+            padding-top: 80px; /* Space for fixed header */
+            min-height: 100vh; /* Ensure the section takes up at least the full viewport height */
+            padding-bottom: 60px; /* Add space at the bottom */
+        }
+
+        .about-me {
+            padding: 60px 40px;
+            background-color: rgba(48, 52, 58, 0.7); /* Slightly darker background for contrast */
+            margin-left: 40px; /* Align the box to the left */
+            margin-top: 85px; /* Space from the header */
+            border-radius: 10px;
+            max-width: 800px; /* Adjust width for a wider box */
+        }
+
+        .about-me h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .skills {
+            margin-top: 30px;
+        }
+
+        /* Skills Section Headers */
+        .about-me h3 {
+            font-size: 35px; /* Match main content header size */
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        } 
+        .skills ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .skills ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+
+        /* Language stars style */
+        .languages .stars {
+            font-size: 20px; /* Larger stars */
+            color: #F0E68C;
+            margin-top: 5px;
+        }
+          .languages ul li {
+           font-size: 18px; /* Same size as About Me content */
+           line-height: 1.6;
+           margin-bottom: 10px;        
+        }   
+        /* Projects Section */
+        #projects {
+            background-image: url('https://i.imgur.com/RoukwPq.jpeg');
+            background-size: cover;
+            background-position: left -400px top 35px;
+            background-attachment: fixed; /* Keep the background fixed */
+            padding-top: 80px; /* Space for fixed header */
+            min-height: 100vh; /* Full viewport height */
+            overflow-y: auto;
+            padding-bottom: 90px;
+            padding-left: 40px; /* Shift the content to the right */
+        }
+
+        .projects-content {
+            padding: 60px 40px;
+            background-color: rgba(48, 52, 58, 0.7); /* Background for content */
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto; /* Align content to the right */
+            margin-top: 50px;   
+       }
+
+        .projects-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        }
+
+        .projects-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-item {
+            margin-top: 30px;
+        }
+
+        .project-item h3 {
+            font-size: 28px;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+   
+         /* programs Section */
+        #programs{
+            background-image: url('https://i.imgur.com/e43vb9R.jpeg');
+            background-size: cover;
+            background-position: centre centre;
+            background-attachment: fixed; /* Keep the background fixed */
+            padding-top: 80px; /* Space for fixed header */
+            min-height: 100vh; /* Full viewport height */
+            overflow-y: auto;
+            margin-left: auto; /* Shift to the right */
+            margin-right: auto;
+
+        }
+          .programs-content {
+            padding: 50px 30px;
+            background-color: rgba(48, 52, 58, 0.93); /* Background for content */
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto; /* Shift to the right */
+            margin-right: auto;
+            margin-top: 50px;
+        }
+         
+           .programs-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+        }
+
+          .programs-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .programs-item {
+            margin-top: 30px;
+        }
+
+
+        .programs-item h3 {
+            font-size: 28px;
+            color: #F0E68C;
+            margin-bottom: 10px;
+        }
+
+        .programs-item p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+         #contact {
+            background-image: url('https://i.imgur.com/jqfiOYT.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+            padding-top: 80px;
+            overflow-y: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+   
+         
+        .contact-section {
+            background-color: rgba(32, 35, 42, 0.7);
+            padding: 50px 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+        .contact-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            color: #F0E68C;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact-section input,
+        .contact-section textarea {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #333;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-section input[type="submit"] {
+            background-color: #80ffff;
+            color: black;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .contact-section input[type="submit"]:hover {
+            background-color: #00ffff;
+        }
+        .resume-btn-wrapper {
+            margin-top: 20px;
+        }
+        .resume-btn {
+            display: inline-block;
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #80ffff;
+            color: black;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .resume-btn:hover {
+            background-color: #00ffff;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px 40px;
+            position: absolute;
+            top: 130px;
+            left: 100px;
+        }
+        .social-icons a {
+            margin-bottom: 35px;
+            font-size: 30px;
+            color: #80ffff;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Name and Navigation -->
+    <header>
+        <div class="branding">
+            <h1>MOHAMMED FAROOQ</h1>
+            <p>Software Engineer</p>
+        </div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <div id="home">
+        <div class="main-content">
+            <h2>Hi there!</h2>
+            <h2>Welcome to my portfolio..</h2>
+            <h2>Where creativity meets code.</h2>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" style="display: none;">
+        <div class="about-me">
+            <h2>About Me</h2>
+           <p>Hello! I'm Mohammed Farooq, a passionate Software Engineer with a love for building impactful solutions through technology. My journey started with a Bachelor's degree in Information Technology from <a href="https://islec.edu.in/" target="_blank" style="color: #F0E68C; text-decoration: underline;">ISL Engineering Collage</a> affiliated with <a href="https://www.osmania.ac.in/" target="_blank" style="color: #F0E68C; text-decoration: underline;">Osmania University</a>. Since then, I have continually pursued opportunities to expand my knowledge and skills. I have gained hands-on experience in various programming languages and tools, and have been involved in numerous projects that have honed my problem-solving and analytical abilities. My dedication to lifelong learning and innovation drives me to stay updated with the latest industry trends and technologies. I am excited about the possibilities ahead and eager to contribute to cutting-edge solutions in the tech world.</p>
+
+            <div class="skills">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>NodeJS</li>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>Web Development</li>
+                    <li>Cloud Computing</li>
+                    <li>Software Proficiency (Microsoft Office)</li>
+                    <li>Data Analysis (Excel)</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>GitLab</li>
+                    <li>Visual Studio Code</li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Communication</li>
+                    <li>Problem Solving</li>
+                    <li>Team Collaboration</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <h3>Languages</h3>
+                <ul>
+                    <li>
+                        English
+                        <div class="stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                    </li>
+                    <li>
+                        Hindi
+                        <div class="stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                    </li>
+                    <li>
+                        Telugu
+                        <div class="stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" style="display: none;">
+        <div class="projects-content">
+            <h2>My Projects</h2>
+            <p>During my bachelor’s degree, I undertook and successfully completed two pivotal projects. The first was a mini project focused on developing a voice assistant application, designed to streamline user interactions through advanced voice recognition technology. The second was a major final-year project, where I worked on an innovative solution for Alzheimer’s diagnosis using 3-D brain imaging. This project aimed to enhance early detection and diagnostic accuracy through the application of cutting-edge imaging techniques.</p>
+
+            <div class="project-item">
+                <h3>AI Voice Assistant</h3>
+                <p>Optimized with PyCharm: Utilized PyCharm’s features for streamlined and
+efficient development.
+Smart Web Search Automation: Engineered real-time, precise web search
+capabilities.
+Seamless YouTube Integration: Enabled intuitive voice-controlled search and
+video playback.
+Enhanced Calculation Features: Implemented robust functions for both simple
+and complex computations.
+Dynamic Weather Detection: Integrated real-time weather updates from trusted
+sources.
+Python Mastery: Demonstrated expertise by creating a cutting-edge, interactive
+voice assistant with advanced features.
+Futuristic User Experience: Delivered a responsive, intuitive interface that sets a
+new standard for voice assistants.</p>
+            </div>
+            <div class="project-item">
+                <h3>Alzheimer Diagnosis Using 3-D Brain Imaging</h3>
+                <p>Introduction of NMF-TDnet Approach:
+Developed an advanced method, NMF-TDnet (Non-negative Matrix
+Factorization with Temporal Dynamics network), specifically designed for 3-D
+brain imaging.
+The approach utilizes a sophisticated network structure, enhanced by
+layerwise convolution, to analyze complex brain data with unprecedented
+accuracy.
+Key Innovations:
+Network Structure & Layerwise Convolution:
+Integrated a unique combination of network architecture and convolutional
+layers, allowing for deeper, more nuanced understanding of brain patterns.
+This innovation enables the system to identify subtle markers of
+Alzheimer's disease that were previously undetectable.
+Efficiency Improvement:
+Achieved a 40% reduction in processing time, significantly accelerating the
+diagnostic workflow.
+The streamlined process allows for faster interpretation of imaging data,
+leading to quicker clinical decision-making.
+Accuracy Enhancement:
+Set new benchmarks in diagnostic accuracy, ensuring early detection of
+Alzheimer's with higher confidence.
+The method's precision in identifying early-stage Alzheimer's makes it a
+valuable tool for clinicians.
+Integration with SVM for Enhanced Precision:
+Integrated NMF-TDnet with Support Vector Machines (SVM), a robust machine
+learning technique, to further enhance diagnostic precision.
+The hybrid system leverages the strengths of both NMF-TDnet and SVM,
+resulting in superior diagnostic outcomes.
+Impact on Alzheimer's Research and Diagnosis:
+The introduction of NMF-TDnet represents a significant advancement in
+Alzheimer's research, offering a new standard for 3-D brain imaging analysis.
+The combined approach of NMF-TDnet and SVM has the potential to
+revolutionize the early diagnosis and treatment of Alzheimer's, ultimately
+improving patient care and outcomes.</p>
+            </div>
+        </div>
+    </div>
+        <!-- Programs Section -->
+        <div id="programs" style="display: none;">
+        <div class="programs-content">
+        <h2>Programs I Have Completed </h2>
+        <p>After my bachelor's degree, I wanted to strengthen my foundational knowledge and gain practical experience. I recognized that the rapidly evolving tech landscape demanded a continuous upgrade of skills, so I sought out programs that would challenge me to think and solve real-world problems. By committing to <a href="https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home?utm_source=braze&utm_medium=email&utm_campaign=enrollmentconfirmation&utm_content=English+Email" target="_blank" style="color: #F0E68C; text-decoration: underline;">CS50x</a> and <a href="https://www.theodinproject.com/" target="_blank" style="color: #F0E68C; text-decoration: underline;">The Odin Project</a>, I aimed to fill any gaps in my understanding and ensure that I was well-prepared for the technical challenges ahead, while also cultivating a deeper expertise in software development and problem-solving.<p>
+        <div class="programs-item">
+            <h3>CS50x: Mastering the Foundations of Computer Science</h3>
+            <p>CS50x is Harvard University's renowned introduction to computer science, and it was instrumental in deepening my understanding of core programming principles. The program covered a wide range of fundamental topics that have enhanced my problem-solving skills and technical competence.</p> <p>Through CS50x, I developed a strong grasp of algorithms, data structures, and computational thinking. I learned how to efficiently analyze and solve complex problems using techniques like recursion, dynamic programming, and searching/sorting algorithms. This course provided a solid understanding of how computers process information, which improved my ability to design efficient and scalable solutions.</p><p>CS50x also introduced me to web development, covering both front-end and back-end technologies. I learned the basics of HTML, CSS, JavaScript, and SQL, enabling me to create dynamic, data-driven websites. Beyond technical skills, the program emphasized clean coding practices, version control using Git, and collaborative problem-solving through pair programming and teamwork.</p>
+<p>By the end of the course, I had not only gained technical expertise but also a new level of confidence in my ability to tackle real-world programming challenges. CS50x pushed me to think critically, write efficient code, and continuously refine my skills through projects that tested my understanding in meaningful ways.</p>
+        <div class="programs-item">
+            <h3>The Odin Project</h3>
+            <p><span class="bold-text">The Odin Project:</span> is an extensive and immersive program designed to provide a comprehensive education in full-stack web development. By engaging in this program, I delved into a wide range of modern web technologies and development practices, which significantly enhanced my technical skills and understanding of the industry. Here’s a detailed overview of what I learned through The Odin Project:</p><P><span class="bold-text">1.Foundational Web Development Skills:</span></p><p><span class="bold-text">HTML & CSS:</span>I mastered the building blocks of web development by creating well-structured, responsive web pages using HTML5 and CSS3. This included the design and implementation of various layout techniques, typography, and responsive design principles to ensure compatibility across different devices and screen sizes.</p><p><span class="bold-text">JavaScript:</span> I developed a strong foundation in JavaScript, learning about its core concepts such as variables, functions, objects, and arrays. I implemented advanced features like asynchronous programming with promises and async/await, as well as manipulating the DOM to create interactive and dynamic web applications.</p><p><span class="bold-text">2.Version Control and Collaboration:</span></p><p><span class="bold-text">Git & GitHub:</span>I gained proficiency in version control using Git and GitHub, which included creating and managing repositories, branching, merging, and resolving conflicts. This experience helped me understand the importance of collaboration in software development and how to manage code changes effectively within a team.</p><p><span class="bold-text">3.Front-End Frameworks and Libraries:</span></p><p><span class="bold-text">React:</span>I explored React, a powerful JavaScript library for building user interfaces. I learned how to create reusable components, manage state, and utilize React’s ecosystem for efficient front-end development. This included understanding hooks, context, and routing to build complex and scalable applications</p><p><span class="bold-text">4.Back-End Development:</span></p><p><span class="bold-text">Node.js & Express:</span> I developed server-side applications using Node.js and Express.js, learning how to build RESTful APIs, handle HTTP requests and responses, and manage server-side logic. This experience provided me with a solid understanding of how to create and interact with databases and backend services.</p><p><span class="bold-text">Databases:</span> I worked with both SQL and NoSQL databases, including PostgreSQL and MongoDB. I learned how to design schemas, perform CRUD operations, and implement database queries to manage and retrieve data efficiently.</p><p><span class="bold-text">5.Project-Based Learning:</span></p><p><span class="bold-text">Capstone Projects:</span>The Odin Project emphasized hands-on learning through a series of capstone projects. These projects involved developing full-stack applications from scratch, integrating front-end and back-end components, and deploying them to live environments. This practical experience honed my problem-solving skills and reinforced my ability to work on real-world development tasks.</p><p><span class="bold-text">5.Deployment and DevOps:</span></p><p><span class="bold-text">Deployment:</span>I learned the processes involved in deploying web applications, including configuring servers, managing deployment pipelines, and ensuring application security and performance. This included using cloud platforms and services to host and scale applications.</p><p><span class="bold-text">7.Soft Skills:</span></p><p><span class="bold-text">Problem-Solving & Debugging:</span>Through various coding challenges and project work, I developed strong problem-solving and debugging skills. I became adept at identifying and resolving issues, optimizing code, and improving application performance.</p>
+        </div>
+    </div>
+            <div id="contact" class="contact-section" style="display: none;">
+    <h2>Contact Me</h2>
+    <div class="social-icons">
+        <a href="mailto:mohammedfarooq753@gmail.com" title="Gmail" aria-label="Gmail"><i class="fas fa-envelope fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/mohammedfarooqcodeteck/" title="LinkedIn" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/farooqcodeteck" title="Github" target="_blank" aria-label="Github"><i class="fa-brands fa-github fa-2x"></i></a>
+        <a href="https://x.com" title="X-Twitter" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+        <a href="https://instagram.com" title="Instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.theodinproject.com/" title="The Odin Project" target="_blank" aria-label="The Odin Project"><i class="fa-solid fa-link fa-2x"></i></a>
+    </div>
+    <div class="contact-form-wrapper">
+        <form action="https://formspree.io/f/xgveednq" method="POST">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="resume-btn-wrapper">
+        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
+    </div>
+</div>
+
+
+// JavaScript to handle navigation between sections
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Remove 'active' class from all links
+        document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+
+        // Get the target section's ID
+        const targetId = this.getAttribute('href').substring(1);
+        
+        // Hide all sections
+        document.querySelectorAll('div[id], section[id]').forEach(section => {
+            section.classList.remove('visible');
+            section.classList.add('hidden');
+        });
+
+        // Show the target section
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.remove('hidden');
+            targetSection.classList.add('visible');
+        } else {
+            console.error("No section found with ID: " + targetId);
+        }
+    });
+});
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
